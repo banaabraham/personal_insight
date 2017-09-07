@@ -3,10 +3,10 @@ from watson_developer_cloud import PersonalityInsightsV2 as PersonalityInsights
 
 def analyze(handle):
     
-    CONSUMER_KEY='jHpNFh0Hi12ECGEWdtKM3aTAm'
-    CONSUMER_SECRET='FfeyjmMCUKQRvNBmgRcNU7h51paOPLbU8yM7cNjOwoJ7GkwykM'
-    OAUTH_TOKEN='880785141940928514-EDFIfnfzeIDMSj3jbGJeLHYiKpw2m4C'
-    OAUTH_TOKEN_SECRET='BMmIsrCDAI2GHwk2043M53jxaSrExNh7CyoFBg4rXqTCY'
+    CONSUMER_KEY=''
+    CONSUMER_SECRET=''
+    OAUTH_TOKEN=''
+    OAUTH_TOKEN_SECRET=''
      
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
@@ -20,8 +20,9 @@ def analyze(handle):
     for status in statuses:
         text += (status._json)['text']
     
-    pi_username = '14a6ca18-57af-4476-8bfa-220137ce47ce'
-    pi_password = '6yKmqNTH3rGw'
+   #ibm bluemix personal insight credentials 
+    pi_username = ''
+    pi_password = ''
     
     personality_insights = PersonalityInsights(username=pi_username, password=pi_password)
     pi_result = personality_insights.profile(text)
