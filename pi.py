@@ -51,7 +51,7 @@ def compare(dict1, dict2):
          compared_data[keys]=abs(dict1[keys] - dict2[keys])
    return compared_data
   
-user_handle= '@ganjarputro'
+user_handle= '@codeacademy'
   
 user_result = analyze(user_handle)
   
